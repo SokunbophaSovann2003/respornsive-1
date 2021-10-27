@@ -1,0 +1,39 @@
+.container{
+    /* display: flex; */
+    display: grid;
+    margin: auto;
+    /* justify-content: space-evenly; */
+    grid-template-columns: 1fr 1fr;
+}
+.col{
+    /* element will size 40% when it in landscape */
+    width: 40%; 
+    height: 200px;
+    background: #fff;
+}
+@media (orientation: portrait){
+    body{
+        background: orangered;
+    }
+    .container{
+        /* help to drop down the element when the size of element are full scren */
+        /* flex-wrap: wrap; */
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    h1{
+        color:#000;
+    }
+    .col{
+        /* The element will be size 90% when the scren are portrail */
+        width: 90%;
+    }
+}
+@media (orientation: landscape){
+    body{
+        background: rgb(0, 119, 255);
+    }
+    h1{
+        color:#fff;
+    }
+}
